@@ -45,7 +45,7 @@ fn move_example() {
     will free the memory. This allows us to avoid a problem that occurs in
     other languages (like C): when s2 and s1 go out of scope, they will both 
     try to free the same memory. This is known as a double free error. Rust
-    avoids the doble free error by invalidating the first variable with a
+    avoids the double free error by invalidating the first variable with a
     "move".
     */
     let s1 = String::from("hello");
