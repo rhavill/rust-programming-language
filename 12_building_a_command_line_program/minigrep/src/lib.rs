@@ -22,8 +22,6 @@ impl Config {
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.filename)?;
 
-    println!("With text:\n{}", contents);
-
     /*
     We’ve declared the run function’s success type as () in the signature, which 
     means we need to wrap the unit type value in the Ok value. This Ok(()) 
@@ -32,4 +30,27 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     it doesn’t return a value we need.
     */
     Ok(())
+}
+
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    vec![]
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn one_result() {
+        let query = "duct";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.";
+
+        assert_eq!(
+            vec!["safe, fast, productive."],
+            search(query, contents)
+        );
+    }
 }
