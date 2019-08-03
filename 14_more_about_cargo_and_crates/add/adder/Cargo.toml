@@ -6,6 +6,6 @@ edition = "2018"
 
 [dependencies]
 rand = "0.3.14"
-add-one = { path = "../add-one" }
-add-two = { path = "../add-two" }
+add_one = { path = "../add_one" }
+add_two = { path = "../add_two" }
 
