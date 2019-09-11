@@ -1,0 +1,7 @@
+[package]
+name = "sync_and_send_traits"
+version = "0.1.0"
+authors = ["Ricardo Havill <rhavill2002@yahoo.com>"]
+edition = "2018"
+
+[dependencies]
